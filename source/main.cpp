@@ -1,13 +1,12 @@
 #include <stdio.h>
-
 #include "application.cpp"
+#include "vulkanRenderer.cpp"
 
-#include "renderer.cpp"
-#include "vulkenRenderer.cpp"
+int main(int argc, char* args[]) {
+    printf("Start\n");
 
-int main(int argc, char* argv[]) {
     application myApp;
-    printf("Test\n");
-    
+    printf("App created\n");
+    myApp.start();
     return 0;
 }

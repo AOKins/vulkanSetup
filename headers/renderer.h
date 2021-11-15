@@ -11,8 +11,14 @@ protected:
 public:
     // Default constructor, calls initialize and sets running to false
     renderer(application * app);
-    ~renderer();
+
+    virtual void initialize() = 0;
 
 };
+
+// Default constructor, calls initialize and sets running to false
+renderer::renderer(application * app) {
+    this->appInstance_ = app;
+}
 
 #endif
